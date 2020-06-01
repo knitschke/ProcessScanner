@@ -1,0 +1,27 @@
+﻿<Window x:Class="PScnFin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PScnFin"
+        mc:Ignorable="d"
+        Title="" Height="350" Width="400.754">
+    <Grid Margin="0,0,-6.6,-8.2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox Name="CB" IsEditable="true" HorizontalAlignment="Left" Margin="173,55,0,0" VerticalAlignment="Top" Width="161" Height="22"/>
+        <Label Content="Nazwa procesu:&#xD;&#xA;" HorizontalAlignment="Left" Margin="54,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.081,0.258" Width="116" Height="34"/>
+        <Button Name="b1" Content="Szukanie aktywnych adresów" HorizontalAlignment="Left" Margin="113,145,0,0" VerticalAlignment="Top" Width="167" RenderTransformOrigin="0.156,0.414" Height="19" Background="LightGreen" Click="Button_Click_1"/>
+        <Button Content="Statystyki" HorizontalAlignment="Left" Margin="144,231,0,0" VerticalAlignment="Top" Width="101" Height="19" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="22"/>
+        <Button Content="Skanowanie" HorizontalAlignment="Left" Margin="125,186,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click_2" Height="19"/>
+        <TextBox Name="IPTB" HorizontalAlignment="Left" Height="23" Margin="173,17,0,0" TextWrapping="Wrap" Text="10.3." VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <Label Content="16 bitów IP(x.y.):" HorizontalAlignment="Left" Margin="50,14,0,0" VerticalAlignment="Top" Height="26" Width="98"/>
+        <Button Content="Baza Danych" HorizontalAlignment="Left" Margin="144,280,0,0" VerticalAlignment="Top" Width="101" Height="19"/>
+        <Label Content="Czas skanowania(min):" HorizontalAlignment="Left" Margin="20,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.016,-0.305" Height="26" Width="142"/>
+        <TextBox Name="TTB" HorizontalAlignment="Left" Height="23" Margin="173,93,0,0" TextWrapping="Wrap" Text="60" VerticalAlignment="Top" Width="80"/>
+
+    </Grid>
+</Window>
