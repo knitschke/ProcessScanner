@@ -67,11 +67,11 @@ namespace PScnFin.Models
                 cnn.Execute($"insert into data (positive_scan,negative_scan,pc_name, scan_id, process_name) values('{p}','{n}','{pc}','{scn}','{proc}');");
             }
         }
-        public static void AddScan(string time)
+        public static void AddScan(string time, string date)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute($"insert into scans (time) values('{time}');");
+                cnn.Execute($"insert into scans (time, date) values('{time}', '{date}');");
             }
         }
         public static List<DataModel> LoadDataTime(String proc)

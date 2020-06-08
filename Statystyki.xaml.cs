@@ -48,6 +48,7 @@ namespace PScnFin
             foreach (ProcessesModel o in PM)
             {
                 CB.Items.Add(o.process_name);
+                
             }
             CB.SelectedIndex = 0;
             /*
@@ -79,6 +80,8 @@ namespace PScnFin
             int countnall = 0;
             time = 0;
             DM = SqliteDataAccess.LoadData();
+            SM = SqliteDataAccess.LoadScans();
+            slcted = LB.SelectedItem.ToString();
             string xx = "";
             for (int i = 0; i < slcted.Length; i++)
             {
@@ -104,7 +107,7 @@ namespace PScnFin
             if (countp + countn > 0)
                 x= (countp * 100) / (countp + countn);
             T1.Text=x.ToString() + "%";
-            T2.Text = (time).ToString();//narazie
+            T2.Text = time.ToString();//narazie
 
             DMtime = SqliteDataAccess.LoadDataTime(slctedproc);
             foreach(DataModel t in DMtime)
