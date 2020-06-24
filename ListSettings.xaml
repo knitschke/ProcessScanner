@@ -1,0 +1,35 @@
+﻿<Window x:Class="PScnFin.ListSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PScnFin"
+        mc:Ignorable="d"
+        Title="ListSettings" Height="440.4" Width="413.2"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,3.4,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <ListBox Name="templist" HorizontalAlignment="Left" Height="230" Margin="40,140,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="templist_SelectionChanged" SelectionMode="Extended"/>
+        <ListBox Name="wholelist" HorizontalAlignment="Left" Height="230" Margin="155,140,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox Name="beg" HorizontalAlignment="Left" Height="23" Margin="30,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105"/>
+        <Button Name="add" Content="Wczytaj adresy" HorizontalAlignment="Left" Margin="90,80,0,0" VerticalAlignment="Top" Width="95" Click="add_Click" Height="19"/>
+        <TextBox Name="end" HorizontalAlignment="Left" Height="23" Margin="145,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105"/>
+        <TextBox Name="singleadd" HorizontalAlignment="Left" Height="25" Margin="85,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105" TextChanged="singleadd_TextChanged"/>
+        <Button Name="addtolist" Content="Dodaj wybrane adresy ->" HorizontalAlignment="Left" Margin="70,106,0,0" VerticalAlignment="Top" Width="140" Click="addtolist_Click" Height="34"/>
+        <ComboBox IsEditable="True" Name="listname" HorizontalAlignment="Left" Margin="80,3,0,0" VerticalAlignment="Top" Width="120" TextBoxBase.TextChanged="listname_TextChanged" SelectionChanged="listname_SelectionChanged" Height="22"/>
+        <Button Name="back" Content="Powrót" HorizontalAlignment="Left" Margin="305,370,0,0" VerticalAlignment="Top" Width="60" Height="20" Click="back_Click" RenderTransformOrigin="0.493,2.086"/>
+        <ComboBox IsEditable="True" Name="proc1" HorizontalAlignment="Left" Margin="275,60,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="proc1_SelectionChanged"/>
+        <ComboBox IsEditable="True" Name="proc2" HorizontalAlignment="Left" Margin="275,97,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox IsEditable="True" Name="proc3" HorizontalAlignment="Left" Margin="275,132,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox IsEditable="True" Name="proc4" HorizontalAlignment="Left" Margin="275,167,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox IsEditable="True" Name="proc5" HorizontalAlignment="Left" Margin="275,205,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Name="savelist" Content="Zapisz zmiany" HorizontalAlignment="Left" Margin="300,321,0,0" VerticalAlignment="Top" Width="80" Click="savelist_Click"/>
+        <Button Content="Skanuj adresy" HorizontalAlignment="Left" Margin="290,251,0,0" VerticalAlignment="Top" Width="95" Height="24" Click="Button_Click"/>
+        <Button Name="ipandname" Content="ip/pcname" HorizontalAlignment="Left" Margin="110,375,0,0" VerticalAlignment="Top" Width="75" Click="ipandname_Click"/>
+        <Button Name="delete" Content="Usuń zaznaczone" HorizontalAlignment="Left" Margin="290,291,0,0" VerticalAlignment="Top" Width="100" Click="delete_Click"/>
+
+    </Grid>
+</Window>

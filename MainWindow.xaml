@@ -5,24 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PScnFin"
         mc:Ignorable="d"
-        Title="" Height="411.2" Width="388.177">
-    <Grid Margin="0,0,-6.6,-70.2">
+        Title="" Height="500.2" Width="388.177"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,-1.4,-4.4">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox Name="CB" IsEditable="true" HorizontalAlignment="Left" Margin="25,73,0,0" VerticalAlignment="Top" Width="161" Height="22"/>
-        <Label Name="LabProc" Content="Nazwa procesu:&#xD;&#xA;" HorizontalAlignment="Left" Margin="54,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.081,0.258" Width="116" Height="25"/>
-        <Button Content="Statystyki" HorizontalAlignment="Left" Margin="125,316,0,0" VerticalAlignment="Top" Width="145" Height="19" Click="Button_Click"/>
-        <Button Background="LightGreen" Content="Skanowanie" HorizontalAlignment="Left" Margin="125,286,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click_2" Height="19" RenderTransformOrigin="0.553,1.526"/>
-        <TextBox Name="IPTB" HorizontalAlignment="Left" Height="23" Margin="213,12,0,0" TextWrapping="Wrap" Text="10.3." VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <Label Content="16 bitów IP(x.y.5|6):" HorizontalAlignment="Left" Margin="70,10,0,0" VerticalAlignment="Top" Height="26" Width="110"/>
-        <Button Content="Baza Danych" HorizontalAlignment="Left" Margin="125,345,0,0" VerticalAlignment="Top" Width="145" Height="19"/>
-        <Label Content="Czas skanowania(min):" HorizontalAlignment="Left" Margin="78,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.016,-0.305" Height="26" Width="142"/>
-        <TextBox Name="TTB" HorizontalAlignment="Left" Height="23" Margin="215,245,0,0" TextWrapping="Wrap" Text="60" VerticalAlignment="Top" Width="80"/>
-        <RadioButton Name="RB1" Content="1" HorizontalAlignment="Left" Margin="254,77,0,0" VerticalAlignment="Top"  Checked="RadioButton_Checked_1"/>
-        <RadioButton Content="2" HorizontalAlignment="Left" Margin="254,107,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" RenderTransformOrigin="0.578,0.667"/>
-        <RadioButton Content="3" HorizontalAlignment="Left" Margin="254,139,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_2" RenderTransformOrigin="0.5,0.5">
+        <ComboBox Name="CB" IsEditable="true" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Width="161" Height="22" SelectionChanged="CB_SelectionChanged"/>
+        <Label Name="LabProc" Content="Nazwa procesu:&#xD;&#xA;" HorizontalAlignment="Left" Margin="56,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.081,0.258" Width="116" Height="25"/>
+        <Button Content="Statystyki" HorizontalAlignment="Left" Margin="127,404,0,0" VerticalAlignment="Top" Width="145" Height="19" Click="Button_Click"/>
+        <Button Background="LightGreen" Content="Skanowanie" HorizontalAlignment="Left" Margin="127,374,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click_2" Height="19" RenderTransformOrigin="0.553,1.526"/>
+        <Button Content="Baza Danych" HorizontalAlignment="Left" Margin="127,433,0,0" VerticalAlignment="Top" Width="145" Height="19"/>
+        <Label Content="Czas skanowania(min):" HorizontalAlignment="Left" Margin="80,324,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.016,-0.305" Height="26" Width="142"/>
+        <TextBox Name="TTB" HorizontalAlignment="Left" Height="23" Margin="217,327,0,0" TextWrapping="Wrap" Text="420" VerticalAlignment="Top" Width="80"/>
+        <RadioButton Name="RB1" Content="1" HorizontalAlignment="Left" Margin="256,159,0,0" VerticalAlignment="Top"  Checked="RadioButton_Checked_1"/>
+        <RadioButton Name="RB2" Content="2" HorizontalAlignment="Left" Margin="256,189,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" RenderTransformOrigin="0.578,0.667"/>
+        <RadioButton Name="RB3" Content="3" HorizontalAlignment="Left" Margin="256,221,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_2" RenderTransformOrigin="0.5,0.5">
             <RadioButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -32,13 +31,15 @@
                 </TransformGroup>
             </RadioButton.RenderTransform>
         </RadioButton>
-        <ComboBox x:Name="CB2" IsEditable="true" HorizontalAlignment="Left" Margin="25,103,0,0" VerticalAlignment="Top" Width="161" Height="22" Visibility="Hidden"/>
-        <ComboBox x:Name="CB3" IsEditable="true" HorizontalAlignment="Left" Margin="25,135,0,0" VerticalAlignment="Top" Width="161" Height="22" Visibility="Hidden"/>
-        <Label Content="Liczba procesów:" HorizontalAlignment="Left" Margin="216,45,0,0" VerticalAlignment="Top" Height="30"/>
-        <ComboBox x:Name="CB4" IsEditable="true" HorizontalAlignment="Left" Margin="25,167,0,0" VerticalAlignment="Top" Width="161" Height="22" Visibility="Hidden"/>
-        <ComboBox x:Name="CB5" IsEditable="true" HorizontalAlignment="Left" Margin="25,199,0,0" VerticalAlignment="Top" Width="161" Height="22" Visibility="Hidden"/>
-        <RadioButton Content="4" HorizontalAlignment="Left" Margin="254,171,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_3"/>
-        <RadioButton Content="5" HorizontalAlignment="Left" Margin="254,203,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_4"/>
+        <ComboBox x:Name="CB2" IsEditable="true" HorizontalAlignment="Left" Margin="25,187,0,0" VerticalAlignment="Top" Width="161" Height="22" Visibility="Hidden"/>
+        <ComboBox x:Name="CB3" IsEditable="true" HorizontalAlignment="Left" Margin="25,219,0,0" VerticalAlignment="Top" Width="161" Height="22" Visibility="Hidden"/>
+        <Label Content="Liczba procesów:" HorizontalAlignment="Left" Margin="221,122,0,0" VerticalAlignment="Top" Height="30"/>
+        <ComboBox x:Name="CB4" IsEditable="true" HorizontalAlignment="Left" Margin="25,251,0,0" VerticalAlignment="Top" Width="161" Height="22" Visibility="Hidden"/>
+        <ComboBox x:Name="CB5" IsEditable="true" HorizontalAlignment="Left" Margin="25,283,0,0" VerticalAlignment="Top" Width="161" Height="22" Visibility="Hidden"/>
+        <RadioButton Name="RB4" Content="4" HorizontalAlignment="Left" Margin="256,253,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_3"/>
+        <RadioButton Name="RB5" Content="5" HorizontalAlignment="Left" Margin="256,285,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_4"/>
+        <ComboBox Name="listname" HorizontalAlignment="Left" Margin="135,63,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="listname_SelectionChanged"/>
+        <Button Content="Edycja listy" HorizontalAlignment="Left" Margin="135,21,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_1" Height="24"/>
 
     </Grid>
 </Window>
